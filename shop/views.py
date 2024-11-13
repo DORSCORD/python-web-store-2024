@@ -15,7 +15,7 @@ def product_list(request: HttpRequest, category_slug: str=None) -> HttpResponse:
         products = products.filter(category=category)
     return render(
         request,
-        "shop/products/list.html",
+        "shop/product/list.html",
         {"category": category,
         "categories": categories,
         "products": products}
