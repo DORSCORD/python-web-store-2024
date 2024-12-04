@@ -2,6 +2,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404
 
 from .models import Category, Product
+from cart.forms import CartAddProductForm
 
 # Create your views here.
 
@@ -24,4 +25,5 @@ def product_list(request: HttpRequest, category_slug: str=None) -> HttpResponse:
 def product_detail(request: HttpRequest, id: int, slug: str) -> HttpResponse:
     """View для одного товару"""
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
-    return render(request, "shop/product/detail.html", {"product": product})
+    cart_product_form = CartAddProductForm()
+    return render(request, "shop/product/detail.html", {"product": product, "cart_product_form": cart_product_form})
