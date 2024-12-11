@@ -28,18 +28,28 @@
             </form>
     
             <div class="text-end">
-              <button type="button" class="btn btn-outline-light me-2">Вхід</button>
-              <button type="button" class="btn btn-warning">Реєстрація</button>
-              <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
-                <i class="bi bi-cart"></i>
-                {% with total_items=cart|length %}
+              <form action="{% url 'account:logout' %}" method="post">
+                {% if request.user.is_authenticated %}
+                  {% csrf_token %}
+                  <a href="{% url "account:password_change" %}" class="btn btn-warning"></a>
+                    {{ request.user.first_name|default:request.user.username }}
+                  </button>
+                  <input type="submit" class="btn btn-outline-light me-2" value="Вихід">
+                {% else %}
+                  <a href="{% url 'account:login' %}" class="btn btn-outline-light me-2">Вхід</a>
+                  <button type="button" class="btn btn-warning">Реєстрація</button>
+                {% endif %}
+                <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
+                  <i class="bi bi-cart"></i>
+                  {% with total_items=cart|length %}
                   {% if total_items > 0 %}
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      {{ total_items }}
-                    </span>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ total_items }}
+                  </span>
                   {% endif %}
-                {% endwith %}
-              </a>
+                  {% endwith %}
+                </a>
+              </form>
             </div>
           </div>
         </div>

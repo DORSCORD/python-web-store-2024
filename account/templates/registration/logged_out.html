@@ -1,0 +1,9 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Вихід з сайт{% endblock %}
+
+{% block content %}
+    <h2>Вихід з сайт</h2>
+    <p>Ви успішно здійснили вихід з сайту.</p>
+    <p>Ви можете знов <a href="{% url "account:login" %}">залогінитись.</a></p>
+{% endblock content %}
