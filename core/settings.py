@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -136,5 +140,5 @@ MEDIA_ROOT = BASE_DIR / "media"
 CART_SESSION_ID = "cart"
 
 LOGIN_REDIRECT_URL = "shop:product_list"
-LOGIN_URL = "account:login"
-LOGOUT_URL = "account:logout"
+LOGIN_URL = "login"
+LOGOUT_URL = "logout"

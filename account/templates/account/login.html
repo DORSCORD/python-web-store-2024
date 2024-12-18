@@ -1,12 +1,16 @@
 {% extends "shop/base.html" %}
 
-{% block title %}Вхід на сайт{% endblock title %}
+{% block title %}Вхід на сайт{% endblock  %}
 
 {% block content %}
-    <h2>Вхід на сайт</h2>
-    <form method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="submit" value="Вхід">
-    </form>
+  <h2>Вхід на сайт</h2>
+  <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Вхід">
+  </form>
+  <p>
+    Якщо Ви ще не зареєстровані на сайті, то перейдіть за
+    <a href="{% url "register" %}">посилання</a>
+  </p>
 {% endblock content %}

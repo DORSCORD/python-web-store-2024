@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Ласково просимо {% endblock %}
+
+{% block content %}
+    <h2>Ласково просимо, {{ new_user.first_name }}</h2>
+    <p>
+        Ваш акаунт було успішно створено.
+        Тепер Ви можете <a href="{% url "login" %}">залогінитись</a>
+    </p>
+{% endblock %}

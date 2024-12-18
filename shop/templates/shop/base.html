@@ -28,16 +28,16 @@
             </form>
     
             <div class="text-end">
-              <form action="{% url 'account:logout' %}" method="post">
+              <form action="{% url 'logout' %}" method="post">
                 {% if request.user.is_authenticated %}
                   {% csrf_token %}
-                  <a href="{% url "account:password_change" %}" class="btn btn-warning"></a>
+                  <a href="{% url 'edit' %}" class="btn btn-warning">
                     {{ request.user.first_name|default:request.user.username }}
-                  </button>
+                  </a>
                   <input type="submit" class="btn btn-outline-light me-2" value="Вихід">
                 {% else %}
-                  <a href="{% url 'account:login' %}" class="btn btn-outline-light me-2">Вхід</a>
-                  <button type="button" class="btn btn-warning">Реєстрація</button>
+                  <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Вхід</a>
+                  <a href="{% url 'register' %}" class="btn btn-warning">Реєстрація</a>
                 {% endif %}
                 <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
                   <i class="bi bi-cart"></i>
