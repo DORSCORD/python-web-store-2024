@@ -56,6 +56,14 @@
       </header>
     </div>
 
+    <div class="container mt-2" id = "messages">
+      {% for message in messages %}
+        <div class="alert alert-{% if messages.tags == "error" %}danger {% else %}success{% endif %} alert-dismissible fade show">
+          {{ message|safe }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endfor %}
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-12">

@@ -18,6 +18,10 @@
       <input type="hidden" name="next" value="{{ next }}">
       <input type="submit" value="Вхід" class="btn btn-warning">
     </form>
+    <p class="mt-2">
+      <a href="{% url 'register' %}" class="text-decoration-none">Реєстрація</a> 
+      <a href="{% url 'password_reset' %}" class="ms-2 text-decoration-none">Забули пароль?</a>
+    </p>
   </div>
 </div>
 {% endblock content %}
