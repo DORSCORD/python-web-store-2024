@@ -1,0 +1,25 @@
+{% extends "shop/base.html" %}
+
+{% block title %} Оформлення замовлення {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-8">
+            <h2>Замовлення</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <p><input type="submit", class="btn btn-warning", value = "Підтвердити замовлення"></p>
+            </form>
+        </div>
+        <div class="col-4 mt-3 border border-1 rounded">
+            <h3>Товари</h3>
+            <ul>
+                {% for item in cart %}
+                    <li>{{ item.quantity }} x {{ item.product.name }} | {{ item.total_price }} ₴</li>
+                {% endfor %}
+            </ul>
+            <p>Усього: <strong>{{ cart.get_total_price }} ₴</strong></p>
+        </div>
+    </div>
+{% endblock content %}
