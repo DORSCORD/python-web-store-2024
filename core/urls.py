@@ -19,11 +19,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from orders import views
 
 urlpatterns = [
     path('account/', include('account.urls')),
-    path("admin/orders/order/<int:order_id>/change/", views.admin_order_detail, name="admin_order_detail"),
     path("admin/", admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
     path("orders/", include("orders.urls", namespace="orders")),
