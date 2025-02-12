@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
-from .models import Order, OrederItem
+from .models import Order, OrderItem
 
 # Register your models here.
 
@@ -34,7 +34,7 @@ def export_to_csv(modeladmin, request, queryset):
 export_to_csv.short_description = "Експерт в CSV"
 
 class OrderItemInline(admin.TabularInline):
-    model = OrederItem
+    model = OrderItem
     raw_id_fields = ["product"]
 
 def order_detail(obj):
