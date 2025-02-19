@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block title %}Оформлення замовлення{% endblock %}
@@ -6,7 +7,7 @@
 {% block content %}
   <div class="row">
     <div class="col-8">
-      <h2>Замовлення</h2>
+      <h2>{% trans "Замовлення" %}</h2>
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
