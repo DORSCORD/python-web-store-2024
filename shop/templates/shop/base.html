@@ -43,16 +43,16 @@
                 {% endif %}
               </form>
               {# cart #}
-              <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
-                <i class="bi bi-cart"></i>
-                {% with total_items=cart|length %}
-                {% if total_items > 0 %}
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {{ total_items }}
-                </span>
-                {% endif %}
-                {% endwith %}
-              </a>
+              {% with total_items=cart|length %}
+              {% if total_items > 0 %}
+                <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
+                  <i class="bi bi-cart"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ total_items }}
+                  </span>
+                </a>
+              {% endif %}
+              {% endwith %}
               {# language #}
               {% get_current_language as LANGUAGE_CODE %}
               {% get_available_languages as LANGUAGES %}
