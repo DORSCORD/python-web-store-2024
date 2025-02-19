@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="uk">
   <head>
@@ -23,12 +25,12 @@
               <li><a href="#" class="nav-link px-2 text-white">Контакти</a></li>
             </ul>
     
-            <form metahod = "get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark text-white" placeholder="Пошук..." aria-label="Search", name="search">
+            <form method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark text-white" placeholder="Пошук..." aria-label="Search" name="search">
             </form>
     
             <div class="text-end">
-              <form action="{% url 'logout' %}" method="post">
+              <form action="{% url 'logout' %}" method="post" class="d-inline-block">
                 {% if request.user.is_authenticated %}
                   {% csrf_token %}
                   <a href="{% url 'edit' %}" class="btn btn-warning">
@@ -36,34 +38,54 @@
                   </a>
                   <input type="submit" class="btn btn-outline-light me-2" value="Вихід">
                 {% else %}
-                  <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Вхід</a>
-                  <a href="{% url 'register' %}" class="btn btn-warning">Реєстрація</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Вхід</a>
+                <a href="{% url 'register' %}" class="btn btn-warning">Реєстрація</a>
                 {% endif %}
-                <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
-                  <i class="bi bi-cart"></i>
-                  {% with total_items=cart|length %}
-                  {% if total_items > 0 %}
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {{ total_items }}
-                  </span>
-                  {% endif %}
-                  {% endwith %}
-                </a>
               </form>
+              {# cart #}
+              <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-light position-relative">
+                <i class="bi bi-cart"></i>
+                {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{ total_items }}
+                </span>
+                {% endif %}
+                {% endwith %}
+              </a>
+              {# language #}
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              <div class="d-inline-block ms-2">
+                <form action="{% url 'set_language' %}" method="post">
+                  {% csrf_token %}
+                  {% for language in languages %}
+                    <button class="btn 
+                    {% if language.code == LANGUAGE_CODE %}btn-outline-warning{% else %}btn-outline-light{% endif %}"
+                    name="language"
+                    value="{{ language.code }}"
+                    >
+                      {{ language.code|upper }}
+                    </button>
+                  {% endfor %}
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </header>
     </div>
 
-    <div class="container mt-2" id = "messages">
+    <div class="container mt-2" id="messages">
       {% for message in messages %}
-        <div class="alert alert-{% if messages.tags == "error" %}danger {% else %}success{% endif %} alert-dismissible fade show">
-          {{ message|safe }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
+      <div class="alert alert-{% if messages.tags == 'error' %}danger{% else %}success{% endif %} alert-dismissible fade show">
+        {{ message|safe }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
       {% endfor %}
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-12">
