@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block title %}Оформлення замовлення{% endblock %}
+{% block title %}{% trans "Оформлення замовлення" %}{% endblock %}
 
 {% block content %}
   <div class="row">
@@ -11,21 +11,23 @@
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <p><input type="submit" class="btn btn-warning" value="Підтвердити замовлення"></p>
+        <p><input type="submit" class="btn btn-warning" value={% trans "Підтвердити замовлення" %}></p>
       </form>
     </div>
     <div class="col-4 mt-3 border border-1 rounded">
-      <h3>Товари</h3>
+      <h3>{% trans "Товари" %}</h3>
       <ul>
         {% for item in cart %}
           <li>{{ item.quantity }} x {{ item.product.name }} | {{item.total_price }} ₴</li>
         {% endfor %}
       </ul>
       {% if cart.coupon %}
-        <p>До знижки: <strong>{{ cart.get_total_price|floatformat:2 }} ₴</strong></p>
+        <p>{% trans "До знижки:" %} <strong>{{ cart.get_total_price|floatformat:2 }} ₴</strong></p>
+        {% blocktrans %}
         <p>Купон "{{ cart.coupon.code }}" на {{ cart.coupon.discount }}%: <strong>{{ cart.get_discount|floatformat:2 }} ₴</strong></p>
+        {% endblocktrans %}
       {% endif %}
-      <p>Усього: <strong>{{ cart.get_total_price_after_discount|floatformat:2 }} ₴</strong></p>
+      <p>{% trans "Усього:" %} <strong>{{ cart.get_total_price_after_discount|floatformat:2 }} ₴</strong></p>
     </div>
   </div>
 {% endblock content %}

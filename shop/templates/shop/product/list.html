@@ -1,18 +1,19 @@
 {% extends "shop/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-  {% if category %}{{ category.name }}{% else %}Каталог товарів{% endif %}
+  {% if category %}{{ category.name }}{% else %}{% trans "Каталог товарів" %}{% endif %}
 {% endblock %}
 
 {% block content %}
 <div class="row">
   <div class="col-3">
-    <h4 class="my-3">Категорії</h4>
+    <h4 class="my-3">{% trans "Категорії" %}</h4>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="{% url 'shop:product_list' %}" class="nav-link {% if not category %}text-bg-warning{% endif %}">
-          Усі товари
+          {% trans "Усі товари" %}
         </a>
       </li>
       {% for c in categories %}
@@ -30,9 +31,9 @@
       {% if category %}
         {{ category.name }}
       {% elif query %}
-        Результат пошуку: {{ query }}
+        {% trans "Результат пошуку:" %} {{ query }}
       {% else %}
-        Каталог товарів
+        {% trans "Каталог товарів" %}
       {% endif %}
     </h4>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -51,7 +52,7 @@
             <p class="card-text">{{ product.price }} ₴</p>
           </div>
           <div class="card-footer">
-            <a href="{{ product.get_absolute_url }}" class="btn btn-warning">Відкрити</a>
+            <a href="{{ product.get_absolute_url }}" class="btn btn-warning">{% trans "Відкрити" %}</a>
           </div>
         </div>
       </div>

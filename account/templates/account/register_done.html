@@ -1,12 +1,17 @@
 {% extends "shop/base.html" %}
-{% load crispy_forms_tags %}
+{% load i18n %}
 
-{% block title %} Ласково просимо {% endblock %}
+{% block title %}{% trans "Ласкаво просимо" %}{% endblock  %}
 
 {% block content %}
-    <h2>Ласково просимо, {{ new_user.first_name }}</h2>
-    <p>
-        Ваш акаунт було успішно створено.
-        Тепер Ви можете <a href="{% url "login" %}">залогінитись</a>
-    </p>
-{% endblock %}
+  {% blocktrans %}
+  <h2>Ласкаво просимо, {{new_user.first_name }}</h2>
+  {% endblocktrans %}
+  <p>
+    {% url 'login' as login_url %}
+    {% blocktrans %}
+    Ваш акаунт було успішно створено.
+    Тепер Ви можете <a href="{{ login_url }}">залогінитись</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock content %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 18:09+0100\n"
+"POT-Creation-Date: 2025-02-26 18:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,355 @@ msgstr ""
 "11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\account\forms.py:8
+msgid "Логін"
+msgstr ""
+
+#: .\account\forms.py:9 .\account\forms.py:13
+msgid "Пароль"
+msgstr ""
+
+#: .\account\forms.py:14
+msgid "Повторення пароль"
+msgstr ""
+
+#: .\account\forms.py:23
+msgid "Паролі не співпадають."
+msgstr ""
+
+#: .\account\models.py:9
+msgid "Користувач"
+msgstr ""
+
+#: .\account\models.py:10
+msgid "Дата народження"
+msgstr ""
+
+#: .\account\models.py:11
+msgid "Фотографія"
+msgstr ""
+
+#: .\account\models.py:14
+msgid "Профіль"
+msgstr ""
+
+#: .\account\models.py:15
+msgid "Профілі"
+msgstr ""
+
+#: .\account\templates\account\edit.html:5
+#: .\account\templates\account\edit.html:11
+msgid "Змінити профіль користувача"
+msgstr ""
+
+#: .\account\templates\account\edit.html:18
+msgid "Зберегти"
+msgstr ""
+
+#: .\account\templates\account\edit.html:20
+msgid "Змінити пароль"
+msgstr ""
+
+#: .\account\templates\account\login.html:4
+#: .\account\templates\account\login.html:7
+#: .\account\templates\registration\login.html:5
+#: .\account\templates\registration\login.html:10
+msgid "Вхід на сайт"
+msgstr ""
+
+#: .\account\templates\account\login.html:11
+#: .\account\templates\registration\login.html:20
+#: .\shop\templates\shop\base.html:41
+msgid "Вхід"
+msgstr ""
+
+#: .\account\templates\account\register.html:5
+#: .\account\templates\account\register.html:10
+msgid "Створити нового користувача"
+msgstr ""
+
+#: .\account\templates\account\register.html:14 .\shop\models.py:40
+msgid "Створити"
+msgstr ""
+
+#: .\account\templates\account\register_done.html:4
+msgid "Ласкаво просимо"
+msgstr ""
+
+#: .\account\templates\account\register_done.html:7
+#, python-format
+msgid ""
+"\n"
+"  <h2>Ласкаво просимо, %(new_user.first_name)s</h2>\n"
+"  "
+msgstr ""
+
+#: .\account\templates\account\register_done.html:12
+#, python-format
+msgid ""
+"\n"
+"    Ваш акаунт було успішно створено.\n"
+"    Тепер Ви можете <a href=\"%(login_url)s\">залогінитись</a>.\n"
+"    "
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:4
+#: .\account\templates\registration\logged_out.html:7
+msgid "Вихід з сайту"
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:8
+msgid "Ви успішно здійснили вихід з сайту."
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:10
+#, python-format
+msgid ""
+"\n"
+"  <p>Ви можете знов <a href=\"%(login_url)s\">залогінитись.</a></p>\n"
+"  "
+msgstr ""
+
+#: .\account\templates\registration\login.html:12
+msgid "Помилка входу на сайт. Спробуйте ще раз."
+msgstr ""
+
+#: .\account\templates\registration\login.html:14
+msgid "Заповніть поля нижче для входу на сайт"
+msgstr ""
+
+#: .\account\templates\registration\login.html:23
+#: .\shop\templates\shop\base.html:42
+msgid "Реєстрація"
+msgstr ""
+
+#: .\account\templates\registration\login.html:24
+msgid "Забули пароль?"
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:4
+#: .\account\templates\registration\password_change_done.html:7
+msgid "Пароль змінено"
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:8
+msgid "Ви успішно здійснили зміну паролю."
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:10
+#, python-format
+msgid ""
+"\n"
+"  <p>Ви можете повернутись на <a href=\"%('product_list_url')s\">головну "
+"сторінку.</a></p>\n"
+"  "
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:5
+#: .\account\templates\registration\password_change_form.html:10
+msgid "Зміна паролю"
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:12
+msgid "Помилка зміни паролю. Спробуйте ще раз."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:14
+#: .\account\templates\registration\password_reset_confirm.html:12
+msgid "Заповніть поля нижче для зміни паролю."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:19
+#: .\account\templates\registration\password_reset_confirm.html:16
+#: .\cart\templates\cart\detail.html:37
+msgid "Змінити"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:4
+#: .\account\templates\registration\password_reset_complete.html:7
+msgid "Пароль відновлено"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:8
+msgid "Ви успішно здійснили відновлення паролю."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:10
+#, python-format
+msgid ""
+"\n"
+"  <p>Ви можете <a href=\"%(login_url)s\">залогінитись.</a></p>\n"
+"  "
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:5
+#: .\account\templates\registration\password_reset_confirm.html:10
+#: .\account\templates\registration\password_reset_form.html:5
+#: .\account\templates\registration\password_reset_form.html:10
+msgid "Відновлення паролю"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:21
+#, python-format
+msgid ""
+"\n"
+"        Посилання на відновлення паролю недійсне. \n"
+"        Скористайтесь сторінкою <a "
+"href=\"%(password_reset_url)s\">відновлення паролю</a> \n"
+"        "
+msgstr ""
+
+#: .\account\templates\registration\password_reset_done.html:4
+#: .\account\templates\registration\password_reset_done.html:7
+msgid "Відновлення пароля відправлено"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_done.html:9
+msgid ""
+"\n"
+"    Ми відправили вам інструкції для встановлення пароля, якщо обліковий "
+"запис з введеною адресою існує. Ви маєте отримати їх найближчим часом. Якщо "
+"Ви не отримали електронного листа, переконайтеся, будь ласка, в "
+"зареєстрованій адресі і перевірте папку \"Спам\".\n"
+"    "
+msgstr ""
+
+#: .\account\templates\registration\password_reset_email.html:4
+#, python-format
+msgid ""
+"\n"
+"Хтось запросив відновленню паролю для користувача з електронною поштою "
+"%(email)s.\n"
+"Перейдіть за наступним посиланням: %(protocol)s://"
+"%(domain)s%(password_reset_confirm_url)s\n"
+"Ваш логін, якщо Ви забули: %(user.get_username)s\n"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_form.html:12
+msgid "Помилка відновлення паролю. Спробуйте ще раз."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_form.html:14
+msgid "Введіть адресу електронної пошти для відновленню паролю."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_form.html:19
+msgid "Отримати лист"
+msgstr ""
+
+#: .\account\views.py:57
+msgid "Профіль було успішно змінено"
+msgstr ""
+
+#: .\account\views.py:59
+msgid "Помилка оновлення профілю"
+msgstr ""
+
+#: .\cart\forms.py:7
+msgid "Кількість:"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:6 .\cart\templates\cart\detail.html:10
+msgid "Ваш кошик"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:14
+msgid "Фото"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:15 .\shop\models.py:10
+#: .\shop\models.py:34
+msgid "Назва"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:16 .\orders\models.py:55
+#: .\orders\templates\admin\orders\order\detail.html:63
+msgid "Кількість"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:17 .\cart\templates\cart\detail.html:42
+msgid "Видалити"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:18
+msgid "Ціна за 1 од."
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:19
+#: .\orders\templates\admin\orders\order\detail.html:46
+#: .\orders\templates\admin\orders\order\detail.html:64
+msgid "Сума"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:55
+msgid "До знижки"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:60
+#, python-format
+msgid ""
+"\n"
+"        <td>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%</"
+"td>\n"
+"        "
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:68
+msgid "Разом:"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:80
+msgid "Застосувати"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:83
+msgid "Продовжити"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:84
+msgid "Замовити"
+msgstr ""
+
+#: .\coupons\forms.py:6
+msgid "Код купона"
+msgstr ""
+
+#: .\coupons\models.py:9
+msgid "Код"
+msgstr ""
+
+#: .\coupons\models.py:10
+msgid "Дійсний з"
+msgstr ""
+
+#: .\coupons\models.py:11
+msgid "Дійсний до"
+msgstr ""
+
+#: .\coupons\models.py:14
+msgid "Відсоток знижки (від 0 дл 100)"
+msgstr ""
+
+#: .\coupons\models.py:15
+msgid "Знижка"
+msgstr ""
+
+#: .\coupons\models.py:17
+msgid "Активний"
+msgstr ""
+
+#: .\coupons\models.py:20 .\orders\models.py:23
+msgid "Купон"
+msgstr ""
+
+#: .\coupons\models.py:21
+msgid "Купони"
+msgstr ""
+
+#: .\orders\admin.py:35
+msgid "Експерт в CSV"
+msgstr ""
 
 #: .\orders\models.py:14
 msgid "Ім'я"
@@ -33,7 +382,7 @@ msgstr ""
 msgid "E-mail"
 msgstr ""
 
-#: .\orders\models.py:17
+#: .\orders\models.py:17 .\orders\templates\admin\orders\order\detail.html:42
 msgid "Адреса"
 msgstr ""
 
@@ -45,7 +394,7 @@ msgstr ""
 msgid "Місто"
 msgstr ""
 
-#: .\orders\models.py:20
+#: .\orders\models.py:20 .\orders\templates\admin\orders\order\detail.html:30
 msgid "Створено"
 msgstr ""
 
@@ -53,14 +402,177 @@ msgstr ""
 msgid "Оновлено"
 msgstr ""
 
-#: .\orders\models.py:22
+#: .\orders\models.py:22 .\orders\templates\admin\orders\order\detail.html:51
 msgid "Оплачено"
 msgstr ""
 
-#: .\orders\models.py:23
-msgid "Купон"
-msgstr ""
-
+#: .\orders\models.py:52 .\orders\templates\admin\orders\order\detail.html:13
 #: .\orders\templates\orders\order\create.html:10
 msgid "Замовлення"
+msgstr ""
+
+#: .\orders\models.py:53 .\orders\templates\admin\orders\order\detail.html:61
+#: .\shop\models.py:50
+msgid "Товар"
+msgstr ""
+
+#: .\orders\models.py:54 .\orders\templates\admin\orders\order\detail.html:62
+#: .\shop\models.py:38
+msgid "Ціна"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:5
+#, python-format
+msgid ""
+"\n"
+"  Замовлення №%(order.id)s - %(block.super)s\n"
+"  "
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:12
+msgid "Домівка"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:20
+#, python-format
+msgid ""
+"\n"
+"    <h1>Замовлення №%(order.id)s</h1>\n"
+"    "
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:34
+msgid "Покупець"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:50
+msgid "Статус"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:51
+msgid "Очікується оплата"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:57
+#: .\orders\templates\orders\order\create.html:18 .\shop\models.py:51
+msgid "Товари"
+msgstr ""
+
+#: .\orders\templates\admin\orders\order\detail.html:77
+msgid "Загальна сума:"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:5
+msgid "Оформлення замовлення"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:14
+msgid "Підтвердити замовлення"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:25
+msgid "До знижки:"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:26
+#, python-format
+msgid ""
+"\n"
+"        <p>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%: "
+"<strong>%(cart.get_discount|floatformat:2)s ₴</strong></p>\n"
+"        "
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:30
+msgid "Усього:"
+msgstr ""
+
+#: .\orders\templates\orders\order\created.html:4
+msgid "Замовлення оформлено"
+msgstr ""
+
+#: .\orders\templates\orders\order\created.html:7
+msgid "Дякуємо!"
+msgstr ""
+
+#: .\orders\templates\orders\order\created.html:8
+#, python-format
+msgid ""
+"\n"
+"  <p>Ваше замовлення було успішно створено. Номер замовлення - "
+"<strong>%(order.id)s</strong></p>\n"
+"  "
+msgstr ""
+
+#: .\shop\models.py:18 .\shop\models.py:33
+msgid "Категорія"
+msgstr ""
+
+#: .\shop\models.py:19 .\shop\templates\shop\product\list.html:12
+msgid "Категорії"
+msgstr ""
+
+#: .\shop\models.py:36
+msgid "Зображення"
+msgstr ""
+
+#: .\shop\models.py:37
+msgid "Опис"
+msgstr ""
+
+#: .\shop\models.py:39
+msgid "Наявність"
+msgstr ""
+
+#: .\shop\models.py:41
+msgid "Оновити"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:21 .\shop\templates\shop\base.html:108
+msgid "Головна"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:22 .\shop\templates\shop\base.html:109
+msgid "Каталог"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:23 .\shop\templates\shop\base.html:110
+msgid "Оплата"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:24 .\shop\templates\shop\base.html:111
+msgid "Доставка"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:25 .\shop\templates\shop\base.html:112
+msgid "Контакти"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:29
+msgid "Пошук..."
+msgstr ""
+
+#: .\shop\templates\shop\base.html:39
+msgid "Вихід"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:27
+msgid "Купити"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:6
+#: .\shop\templates\shop\product\list.html:36
+msgid "Каталог товарів"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:16
+msgid "Усі товари"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:34
+msgid "Результат пошуку:"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:55
+msgid "Відкрити"
 msgstr ""

@@ -36,7 +36,7 @@
                   <a href="{% url 'edit' %}" class="btn btn-warning">
                     {{ request.user.first_name|default:request.user.username }}
                   </a>
-                  <input type="submit" class="btn btn-outline-light me-2" value={% trans "Вихід"%}>
+                  <input type="submit" class="btn btn-outline-light me-2" value={% trans "Вихід" %}>
                 {% else %}
                 <a href="{% url 'login' %}" class="btn btn-outline-light me-2">{% trans "Вхід" %}</a>
                 <a href="{% url 'register' %}" class="btn btn-warning">{% trans "Реєстрація" %}</a>

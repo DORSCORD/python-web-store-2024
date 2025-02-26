@@ -1,16 +1,13 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %}Вхід на сайт{% endblock  %}
+{% block title %}{% trans "Вхід на сайт" %}{% endblock  %}
 
 {% block content %}
-  <h2>Вхід на сайт</h2>
+  <h2>{% trans "Вхід на сайт" %}</h2>
   <form method="post">
     {{ form.as_p }}
     {% csrf_token %}
-    <input type="submit" value="Вхід">
+    <input type="submit" value={% trans "Вхід" %}>
   </form>
-  <p>
-    Якщо Ви ще не зареєстровані на сайті, то перейдіть за
-    <a href="{% url "register" %}">посилання</a>
-  </p>
 {% endblock content %}

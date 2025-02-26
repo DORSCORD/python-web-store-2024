@@ -1,9 +1,11 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %}Замовлення оформлено{% endblock %}
+{% block title %}{% trans "Замовлення оформлено" %}{% endblock  %}
 
 {% block content %}
-    <h2>Дякуємо!</h2>
-    <p>Ваше замовлення було успішно створено. Номер замовлення - <strong>{{ order.id }}</strong></p>
+  <h2>{% trans "Дякуємо!" %}</h2>
+  {% blocktrans %}
+  <p>Ваше замовлення було успішно створено. Номер замовлення - <strong>{{ order.id }}</strong></p>
+  {% endblocktrans %}
 {% endblock content %}
-

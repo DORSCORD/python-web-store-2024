@@ -1,9 +1,13 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %}Вихід з сайт{% endblock %}
+{% block title %}{% trans "Вихід з сайту" %}{% endblock  %}
 
 {% block content %}
-    <h2>Вихід з сайт</h2>
-    <p>Ви успішно здійснили вихід з сайту.</p>
-    <p>Ви можете знов <a href="{% url "login" %}">залогінитись.</a></p>
+  <h2>{% trans "Вихід з сайту" %}</h2>
+  <p>{% trans "Ви успішно здійснили вихід з сайту." %}</p>
+  {% url 'login' as login_url %}
+  {% blocktrans %}
+  <p>Ви можете знов <a href="{{ login_url }}">залогінитись.</a></p>
+  {% endblocktrans %}
 {% endblock content %}
