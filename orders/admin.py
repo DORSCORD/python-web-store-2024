@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext as _
 
 from .models import Order, OrderItem
 
@@ -31,7 +32,7 @@ def export_to_csv(modeladmin, request, queryset):
             data_row.append(value)
         writer.writerow(data_row)
     return response
-export_to_csv.short_description = "Експерт в CSV"
+export_to_csv.short_description = _("Експерт в CSV")
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
@@ -39,7 +40,7 @@ class OrderItemInline(admin.TabularInline):
 
 def order_detail(obj):
     url = reverse("orders:admin_order_detail", args=[obj.id])
-    return mark_safe(f"<a href='{url}'>Перегляд</a>")
+    return mark_safe(f"<a href='{url}'>{_("Перегляд")}</a>")
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
