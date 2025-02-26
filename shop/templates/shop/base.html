@@ -18,15 +18,15 @@
               Nastolkien
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="#" class="nav-link px-2 text-secondary">Головна</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Каталог</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Оплата</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Доставка</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Контакти</a></li>
+              <li><a href="#" class="nav-link px-2 text-secondary">{% trans "Головна" %}</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">{% trans "Каталог" %}</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">{% trans "Оплата" %}</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">{% trans "Доставка" %}</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">{% trans "Контакти" %}</a></li>
             </ul>
     
             <form method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark text-white" placeholder="Пошук..." aria-label="Search" name="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark text-white" placeholder={% trans "Пошук..." %} aria-label="Search" name="search">
             </form>
     
             <div class="text-end">
@@ -36,10 +36,10 @@
                   <a href="{% url 'edit' %}" class="btn btn-warning">
                     {{ request.user.first_name|default:request.user.username }}
                   </a>
-                  <input type="submit" class="btn btn-outline-light me-2" value="Вихід">
+                  <input type="submit" class="btn btn-outline-light me-2" value={% trans "Вихід"%}>
                 {% else %}
-                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Вхід</a>
-                <a href="{% url 'register' %}" class="btn btn-warning">Реєстрація</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">{% trans "Вхід" %}</a>
+                <a href="{% url 'register' %}" class="btn btn-warning">{% trans "Реєстрація" %}</a>
                 {% endif %}
               </form>
               {# cart #}
@@ -105,11 +105,11 @@
         </a>
     
         <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Головна</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Каталог</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Оплата</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Доставка</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Контакти</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">{% trans "Головна" %}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">{% trans "Каталог" %}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">{% trans "Оплата" %}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">{% trans "Доставка" %}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">{% trans "Контакти" %}</a></li>
         </ul>
       </footer>
     </div>
