@@ -9,6 +9,7 @@ pillow = "*"
 markdown = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
+django-rosetta = "*"
 
 [dev-packages]
 

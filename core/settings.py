@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "coupons",
     "crispy_forms",
     "crispy_bootstrap5",
+    'rosetta',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
