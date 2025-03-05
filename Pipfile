@@ -10,6 +10,7 @@ markdown = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
 django-rosetta = "*"
+django-parler = "*"
 
 [dev-packages]
 
