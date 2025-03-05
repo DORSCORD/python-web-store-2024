@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-26 18:32+0100\n"
+"POT-Creation-Date: 2025-03-05 17:31+0100\n"
 "PO-Revision-Date: 2025-02-26 19:04+0200\n"
 "Last-Translator:   <admin@email.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,7 +162,8 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"  <p>Ви можете повернутись на <a href=\"%('product_list_url')s\">головну сторінку.</a></p>\n"
+"  <p>Ви можете повернутись на <a href=\"%('product_list_url')s\">головну "
+"сторінку.</a></p>\n"
 "  "
 msgstr ""
 
@@ -219,7 +220,8 @@ msgstr "Order"
 msgid ""
 "\n"
 "        Посилання на відновлення паролю недійсне. \n"
-"        Скористайтесь сторінкою <a href=\"%(password_reset_url)s\">відновлення паролю</a> \n"
+"        Скористайтесь сторінкою <a "
+"href=\"%(password_reset_url)s\">відновлення паролю</a> \n"
 "        "
 msgstr ""
 
@@ -231,7 +233,10 @@ msgstr ""
 #: .\account\templates\registration\password_reset_done.html:9
 msgid ""
 "\n"
-"    Ми відправили вам інструкції для встановлення пароля, якщо обліковий запис з введеною адресою існує. Ви маєте отримати їх найближчим часом. Якщо Ви не отримали електронного листа, переконайтеся, будь ласка, в зареєстрованій адресі і перевірте папку \"Спам\".\n"
+"    Ми відправили вам інструкції для встановлення пароля, якщо обліковий "
+"запис з введеною адресою існує. Ви маєте отримати їх найближчим часом. Якщо "
+"Ви не отримали електронного листа, переконайтеся, будь ласка, в "
+"зареєстрованій адресі і перевірте папку \"Спам\".\n"
 "    "
 msgstr ""
 
@@ -239,8 +244,10 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"Хтось запросив відновленню паролю для користувача з електронною поштою %(email)s.\n"
-"Перейдіть за наступним посиланням: %(protocol)s://%(domain)s%(password_reset_confirm_url)s\n"
+"Хтось запросив відновленню паролю для користувача з електронною поштою "
+"%(email)s.\n"
+"Перейдіть за наступним посиланням: %(protocol)s://"
+"%(domain)s%(password_reset_confirm_url)s\n"
 "Ваш логін, якщо Ви забули: %(user.get_username)s\n"
 msgstr ""
 
@@ -308,7 +315,8 @@ msgstr "Without coupon"
 #, python-format
 msgid ""
 "\n"
-"        <td>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%</td>\n"
+"        <td>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%</"
+"td>\n"
 "        "
 msgstr ""
 "\n"
@@ -327,12 +335,22 @@ msgid "Продовжити"
 msgstr "Continue"
 
 #: .\cart\templates\cart\detail.html:84
-#| msgid "Замовлення"
 msgid "Замовити"
 msgstr "Order"
 
+#: .\core\urls.py:25
+msgid "account/"
+msgstr ""
+
+#: .\core\urls.py:27
+msgid "cart/"
+msgstr ""
+
+#: .\core\urls.py:28
+msgid "orders/"
+msgstr ""
+
 #: .\coupons\forms.py:6
-#| msgid "Купон"
 msgid "Код купона"
 msgstr "Coupon"
 
@@ -367,7 +385,6 @@ msgid "Купон"
 msgstr "Coupon"
 
 #: .\coupons\models.py:21
-#| msgid "Купон"
 msgid "Купони"
 msgstr "Coupons"
 
@@ -487,11 +504,13 @@ msgstr "Without coupon:"
 #, python-format
 msgid ""
 "\n"
-"        <p>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%: <strong>%(cart.get_discount|floatformat:2)s ₴</strong></p>\n"
+"        <p>Купон \"%(cart.coupon.code)s\" на %(cart.coupon.discount)s%%: "
+"<strong>%(cart.get_discount|floatformat:2)s ₴</strong></p>\n"
 "        "
 msgstr ""
 "\n"
-"<p>Coupon \"%(cart.coupon.code)s\" off %(cart.coupon.discount)s%%: <strong>%(cart.get_discount|floatformat:2)s ₴</strong></p>"
+"<p>Coupon \"%(cart.coupon.code)s\" off %(cart.coupon.discount)s%%: "
+"<strong>%(cart.get_discount|floatformat:2)s ₴</strong></p>"
 
 #: .\orders\templates\orders\order\create.html:30
 msgid "Усього:"
@@ -511,8 +530,13 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"  <p>Ваше замовлення було успішно створено. Номер замовлення - <strong>%(order.id)s</strong></p>\n"
+"  <p>Ваше замовлення було успішно створено. Номер замовлення - "
+"<strong>%(order.id)s</strong></p>\n"
 "  "
+msgstr ""
+
+#: .\orders\urls.py:9
+msgid "create/"
 msgstr ""
 
 #: .\shop\models.py:18 .\shop\models.py:33
@@ -552,7 +576,6 @@ msgid "Каталог"
 msgstr "Catalog"
 
 #: .\shop\templates\shop\base.html:23 .\shop\templates\shop\base.html:110
-#| msgid "Оплачено"
 msgid "Оплата"
 msgstr "Payment"
 
